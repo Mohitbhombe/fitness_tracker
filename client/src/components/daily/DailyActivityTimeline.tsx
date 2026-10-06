@@ -230,7 +230,7 @@ export const DailyActivityTimeline: React.FC<DailyActivityTimelineProps> = ({
           {timelineItems.map((item) => {
             const Icon = item.icon;
             return (
-              <div key={item.id} className="relative flex items-start gap-4 group">
+              <div key={`${item.type}_${item.id}`} className="relative flex items-start gap-4 group">
                 <div
                   className={`absolute -left-6 top-1 flex h-6 w-6 items-center justify-center rounded-full ${item.iconBg} ring-4 ring-white dark:ring-slate-900 shadow-sm transition group-hover:scale-110`}
                 >

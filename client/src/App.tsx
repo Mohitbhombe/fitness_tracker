@@ -116,17 +116,21 @@ const MainLayout: React.FC = () => {
   );
 };
 
+import { ErrorBoundary } from './components/common/ErrorBoundary';
+
 export const App: React.FC = () => {
   return (
-    <AuthProvider>
-      <ThemeProvider>
-        <DateProvider>
-          <FitnessDataProvider>
-            <MainLayout />
-          </FitnessDataProvider>
-        </DateProvider>
-      </ThemeProvider>
-    </AuthProvider>
+    <ErrorBoundary>
+      <AuthProvider>
+        <ThemeProvider>
+          <DateProvider>
+            <FitnessDataProvider>
+              <MainLayout />
+            </FitnessDataProvider>
+          </DateProvider>
+        </ThemeProvider>
+      </AuthProvider>
+    </ErrorBoundary>
   );
 };
 

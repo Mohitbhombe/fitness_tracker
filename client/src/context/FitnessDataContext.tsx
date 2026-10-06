@@ -17,6 +17,7 @@ import {
 import { apiService } from '../services/api';
 import { useDate } from './DateContext';
 import { calculateDailyScore } from '../utils/fitnessCalculations';
+import { DEFAULT_PROFILE } from '../utils/sampleData';
 
 interface FitnessDataContextType {
   profile: Profile;
@@ -76,7 +77,7 @@ export const FitnessDataProvider: React.FC<{ children: React.ReactNode }> = ({ c
   const { selectedDate } = useDate();
   const [loading, setLoading] = useState(true);
 
-  const [profile, setProfileState] = useState<Profile>(() => apiService.getProfile() as any);
+  const [profile, setProfileState] = useState<Profile>(DEFAULT_PROFILE);
   const [weightLogs, setWeightLogs] = useState<WeightLog[]>([]);
   const [foodDatabase, setFoodDatabase] = useState<FoodItem[]>([]);
   const [meals, setMeals] = useState<MealEntry[]>([]);

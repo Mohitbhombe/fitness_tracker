@@ -118,7 +118,7 @@ export const INITIAL_EXERCISES: ExerciseLog[] = [
 
 export const INITIAL_WORKOUTS: Workout[] = [
   {
-    id: 'wk_1',
+    id: 'wkt_1',
     date: '2026-10-06',
     title: 'Chest & Triceps Strength Workout',
     exercises: [
@@ -158,7 +158,7 @@ export const INITIAL_RUNNING_LOGS: RunningLog[] = [
 
 export const INITIAL_WALKING_LOGS: WalkingLog[] = [
   {
-    id: 'wk_1',
+    id: 'wlk_1',
     date: '2026-10-06',
     steps: 7250,
     distanceKm: 5.2,
