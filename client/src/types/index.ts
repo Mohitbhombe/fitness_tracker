@@ -1,4 +1,4 @@
-import { Gender, ActivityLevel, FitnessGoal, WeightUnit, HeightUnit } from '../utils/fitnessCalculations';
+import type { Gender, ActivityLevel, FitnessGoal, WeightUnit, HeightUnit } from '../utils/fitnessCalculations';
 
 export interface User {
   id: string;
