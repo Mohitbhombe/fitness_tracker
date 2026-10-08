@@ -199,6 +199,11 @@ app.post('/api/goals', authMiddleware, async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`FitTrack Backend Server listening on port ${PORT}`);
-});
+if (process.env.NODE_ENV !== 'production' || require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`FitTrack Backend Server listening on port ${PORT}`);
+  });
+}
+
+module.exports = app;
+
